@@ -1,9 +1,32 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Framework } from '../framework';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class ApiService {
+export class FrameworkService {
+  private apiUrl = 'http://localhost:3000/frameworks';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getFrameworks(): Observable<Framework[]> {
+    return this.http.get<Framework[]>(this.apiUrl);
+  }
+
+  deleteFramework(Framework: Framework): Observable<Framework> {
+    const url = `${this.apiUrl}/${Framework.id}`;
+    return this.http.delete<Framework>(url);
+  }
+
+  addFramework(Framework: Framework): Observable<Framework> {
+    return this.http.post<Framework>(this.apiUrl, Framework, httpOptions);
+  }
 }

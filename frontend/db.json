@@ -1,8 +1,13 @@
 {
     "frameworks": [
       {
-       
-      }
+         "name": "Angular",
+         "version": "v1.0.1"
+      },
+      {
+        "name": "React",
+        "version": "v2.0.3"
+     },
       
     ]
 }
