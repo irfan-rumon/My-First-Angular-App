@@ -1,5 +1,5 @@
 export interface Framework {
-    id?: number;
+    id: number,
     name: string;
     version: string;
 

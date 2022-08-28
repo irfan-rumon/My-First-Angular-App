@@ -10,6 +10,7 @@ export class AddFrameworkComponent implements OnInit {
   @Output() onAddFramework: EventEmitter<Framework> = new EventEmitter();
   name: string;
   version: string;
+  id: number;
   constructor() { }
 
   ngOnInit(): void {
@@ -27,12 +28,13 @@ export class AddFrameworkComponent implements OnInit {
     }
 
     const newFramework: Framework = {
+      id: this.id,
       name: this.name,
       version: this.version,
     };
 
     this.onAddFramework.emit(newFramework);
-
+    this.id = 0;
     this.name = '';
     this.version = '';
   }
