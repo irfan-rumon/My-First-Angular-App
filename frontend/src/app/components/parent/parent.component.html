@@ -1,3 +1,4 @@
+<h1 class="heading"> Input Framework info</h1>
 <app-add-framework
  (onAddFramework)="addFramework($event)"
 ></app-add-framework>
@@ -5,6 +6,6 @@
 <app-framework-item
   *ngFor="let framework of frameworks"
   [framework]="framework"
-  (onDeleteFramework)="deleteFramework(framework)"
+ 
 >
 </app-framework-item>

@@ -1,14 +1,10 @@
 
 <div
-  class="task"
+  class="framework"
 >
   <h3>
     {{ framework.name }}
-    <fa-icon
-      (click)="onDelete(framework)"
-      [ngStyle]="{ color: 'red' }"
-      [icon]="faTimes"
-    ></fa-icon>
+    <span>{{ framework.version }}</span>
   </h3>
-  <span>{{ framework.version }}</span>
+  
 </div>

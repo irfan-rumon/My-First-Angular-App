@@ -17,15 +17,10 @@ export class ParentComponent implements OnInit {
     console.log(this.frameworks);
   }
 
-  deleteFramework(framework: Framework) {
-    this.api
-      .deleteFramework(framework)
-      .subscribe(
-        () => (this.frameworks = this.frameworks.filter((t) => t.id !== framework.id))
-      );
-  }
+  
 
   addFramework(framework: Framework) {
+    console.log('entered!!');
     this.api.addFramework(framework).subscribe((framework) => this.frameworks.push(framework));
   }
 

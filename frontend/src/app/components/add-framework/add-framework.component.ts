@@ -8,9 +8,9 @@ import { Framework } from 'src/app/framework';
 })
 export class AddFrameworkComponent implements OnInit {
   @Output() onAddFramework: EventEmitter<Framework> = new EventEmitter();
+  id: number;
   name: string;
   version: string;
-  id: number;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,3 +1,9 @@
 .add-form {
     margin-bottom: 40px;
+    width: 75%;
+  }
+
+  .save{
+      background-color: blueviolet;
+      color: white;
   }
