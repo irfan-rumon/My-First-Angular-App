@@ -1,1 +1,24 @@
-<p>Hello</p>
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="name">Task</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="name"
+        id="name"
+        placeholder="Name:"
+      />
+    </div>
+    <div class="form-control">
+      <label for="version">version</label>
+      <input
+        type="text"
+        name="version"
+        [(ngModel)]="version"
+        id="version"
+        placeholder="Version"
+      />
+    </div>
+
+    <input type="submit" value="Save Framework" class="btn btn-block" />
+  </form>
