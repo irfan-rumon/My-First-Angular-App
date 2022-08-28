@@ -12,7 +12,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root',
 })
-export class FrameworkService {
+export class ApiService {
   private apiUrl = 'http://localhost:3000/frameworks';
 
   constructor(private http: HttpClient) {}
@@ -21,9 +21,9 @@ export class FrameworkService {
     return this.http.get<Framework[]>(this.apiUrl);
   }
 
-  deleteFramework(Framework: Framework): Observable<Framework> {
+  deleteFramework(Framework: Framework): Observable<Framework[]> {
     const url = `${this.apiUrl}/${Framework.id}`;
-    return this.http.delete<Framework>(url);
+    return this.http.delete<Framework[]>(url);
   }
 
   addFramework(Framework: Framework): Observable<Framework> {
