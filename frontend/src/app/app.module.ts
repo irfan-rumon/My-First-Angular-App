@@ -7,18 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddFrameworkComponent } from './components/add-framework/add-framework.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { FrameworkItemComponent } from './components/framework-item/framework-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddFrameworkComponent,
-    ParentComponent
+    ParentComponent,
+    FrameworkItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

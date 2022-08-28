@@ -1,0 +1,14 @@
+<p>framework-item works!</p>
+<div
+  class="task"
+>
+  <h3>
+    {{ framework.name }}
+    <fa-icon
+      (click)="onDelete(framework)"
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
+  <h4>{{ framework.version }}</h4>
+</div>
