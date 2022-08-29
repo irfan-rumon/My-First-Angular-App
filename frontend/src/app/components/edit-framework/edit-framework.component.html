@@ -1,0 +1,35 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+ 
+    <div class="form-control">
+      <label for="id">ID</label>
+      <input
+        type="text"
+        name="id"
+        [(ngModel)]="id"
+        id="id"
+        placeholder="ID:"
+      />
+    </div>
+      <div class="form-control">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          id="name"
+          placeholder="Name:"
+        />
+      </div>
+      <div class="form-control">
+        <label for="version">version</label>
+        <input
+          type="text"
+          name="version"
+          [(ngModel)]="version"
+          id="version"
+          placeholder="Version"
+        />
+      </div>
+  
+      <input type="submit" value="Update Framework" class="btn btn-block update" />
+  </form>

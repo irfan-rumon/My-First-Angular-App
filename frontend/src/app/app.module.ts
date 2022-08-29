@@ -9,13 +9,15 @@ import { AddFrameworkComponent } from './components/add-framework/add-framework.
 import { ParentComponent } from './components/parent/parent.component';
 import { FrameworkItemComponent } from './components/framework-item/framework-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditFrameworkComponent } from './components/edit-framework/edit-framework.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddFrameworkComponent,
     ParentComponent,
-    FrameworkItemComponent
+    FrameworkItemComponent,
+    EditFrameworkComponent
   ],
   imports: [
     BrowserModule,
