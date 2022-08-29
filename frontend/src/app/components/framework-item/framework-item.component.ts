@@ -10,6 +10,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class FrameworkItemComponent implements OnInit {
   @Input() framework: Framework;
   @Output() onDeleteFramework: EventEmitter<Framework> = new EventEmitter();
+  faTimes = faTimes;
 
   constructor() { }
 

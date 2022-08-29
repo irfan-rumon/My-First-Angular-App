@@ -10,6 +10,7 @@
 <app-framework-item
   *ngFor="let framework of frameworks"
   [framework]="framework"
+  (onDeleteFramework)="deleteFramework(framework)"
 >
 </app-framework-item>
 

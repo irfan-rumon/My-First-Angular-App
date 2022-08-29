@@ -5,6 +5,11 @@
   <h3>
     {{ framework.name }}
     <span>{{ framework.version }}</span>
+    <fa-icon
+    (click)="onDelete(framework)"
+    [ngStyle]="{ color: 'red' }"
+    [icon]="faTimes"
+  ></fa-icon>
   </h3>
   
 </div>

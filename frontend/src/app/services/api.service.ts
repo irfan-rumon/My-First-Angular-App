@@ -26,4 +26,9 @@ export class ApiService {
   addFramework(Framework: Framework): Observable<Framework> {
     return this.http.post<Framework>(this.apiUrl, Framework, httpOptions);
   }
+
+  deleteFramework(framework: Framework): Observable<Framework> {
+    const url = `${this.apiUrl}/${framework.id}`;
+    return this.http.delete<Framework>(url);
+  }
 }

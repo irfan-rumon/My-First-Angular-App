@@ -24,4 +24,12 @@ export class ParentComponent implements OnInit {
     this.api.addFramework(framework).subscribe((framework) => this.frameworks.push(framework));
   }
 
+  deleteFramework(framework: Framework) {
+    this.api
+      .deleteFramework(framework)
+      .subscribe(
+        () => (this.frameworks = this.frameworks.filter((t) => t.id !== framework.id))
+      );
+  }
+
 }
