@@ -1,24 +1,9 @@
 {
   "frameworks": [
     {
-      "id": "2",
-      "name": "ed",
-      "version": "ed"
-    },
-    {
       "id": "1",
-      "name": "edf",
-      "version": "dd"
-    },
-    {
-      "id": "e",
-      "name": "we",
-      "version": "e"
-    },
-    {
-      "id": "10",
-      "name": "e",
-      "version": "eeee2dd"
+      "name": "Angular",
+      "version": "b1.0.9"
     },
     {
       "id": "88",
