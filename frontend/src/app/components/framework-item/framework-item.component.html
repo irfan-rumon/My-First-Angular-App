@@ -5,6 +5,7 @@
   <h3>
     {{ framework.name }}
     <span>{{ framework.version }}</span>
+    <button id="edit" (click)="onEdit(framework)">Edit</button>
     <fa-icon
     (click)="onDelete(framework)"
     [ngStyle]="{ color: 'red' }"

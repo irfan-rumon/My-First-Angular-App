@@ -9,6 +9,7 @@ import { Framework } from 'src/app/framework';
 })
 export class ParentComponent implements OnInit {
   frameworks : Framework[];
+  isEdit: boolean = false;
 
   constructor(private api: ApiService) { }
 
@@ -30,6 +31,12 @@ export class ParentComponent implements OnInit {
       .subscribe(
         () => (this.frameworks = this.frameworks.filter((t) => t.id !== framework.id))
       );
+  }
+
+  editFramework(framework: Framework) {
+    this.api.editFramework(framework).subscribe(
+      
+    );
   }
 
 }

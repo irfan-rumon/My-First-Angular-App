@@ -9,7 +9,11 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class FrameworkItemComponent implements OnInit {
   @Input() framework: Framework;
+
   @Output() onDeleteFramework: EventEmitter<Framework> = new EventEmitter();
+  @Output() onEditFramework: EventEmitter<Framework> = new EventEmitter();
+  
+ 
   faTimes = faTimes;
 
   constructor() { }
@@ -19,5 +23,9 @@ export class FrameworkItemComponent implements OnInit {
 
   onDelete(framework:Framework) {
     this.onDeleteFramework.emit(framework);
+  }
+
+  onEdit(framework:Framework) {
+    this.onEditFramework.emit(framework);
   }
 }

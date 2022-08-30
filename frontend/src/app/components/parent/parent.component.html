@@ -1,16 +1,21 @@
 
 
 <h1 class="heading"> Input Framework info</h1>
-<app-add-framework
+
+<app-add-framework *ngIf="!isEdit"
  (onAddFramework)="addFramework($event)"
 ></app-add-framework>
 
+<app-add-framework *ngIf="isEdit"
+   #to be done
+></app-add-framework>
 
 
 <app-framework-item
   *ngFor="let framework of frameworks"
   [framework]="framework"
   (onDeleteFramework)="deleteFramework(framework)"
+  (onEditFramework)="editFramework(framework)"
 >
 </app-framework-item>
 
