@@ -10,6 +10,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { FrameworkItemComponent } from './components/framework-item/framework-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditFrameworkComponent } from './components/edit-framework/edit-framework.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EditFrameworkComponent } from './components/edit-framework/edit-framewo
     AddFrameworkComponent,
     ParentComponent,
     FrameworkItemComponent,
-    EditFrameworkComponent
+    EditFrameworkComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
