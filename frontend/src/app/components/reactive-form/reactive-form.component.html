@@ -1,17 +1,44 @@
 <div class="m-4">
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="frForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label class="form-label" for="name">Framework Name:</label>
-            <input type="text" class="form-control" formControlName="name" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="version">Framework Version:</label>
-            <input type="text" class="form-control" formControlName="version" required>
+            <input type="text" class="form-control"  id="name" formControlName="name" >
+            <span style="color:red;" *ngIf="name && name.untouched &&  name.errors?.['required']" >
+                Framework Name is required
+            </span>
+
+            <span style="color:red;" *ngIf="name && name.dirty && name.errors?.['minlength']" >
+                Framework Name must be at least 3 characters long.
+            </span>
+
+            <span style="color:red;" *ngIf="name && name.dirty && name.errors?.['maxlength']" >
+                Framework Name must be at most 5 characters long.
+            </span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label" for="version">Release Date:</label>
-            <input type="date" class="form-control" formControlName="date" required>
+            <label class="form-label" for="name">Framework Version:</label>
+            <input type="text" class="form-control"  id="version" formControlName="version" >
+            <span style="color:red;" *ngIf="version && version.untouched && version.errors?.['required']" >
+                *Framework version is required
+            </span>
+
+            <span style="color:red;" *ngIf="version  && version.errors?.['minlength']" >
+                *Framework version must be at least 3 characters long.
+            </span>
+
+            <span style="color:red;" *ngIf="version  && version.errors?.['maxlength']" >
+                *Framework version must be at most 5 characters long.
+            </span>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label" for="releaseDate">Release Date:</label>
+            <input type="date" class="form-control" formControlName="releaseDate" required>
+            <span style="color:red;" *ngIf="releaseDate && releaseDate.untouched  && releaseDate.errors?.['required']" >
+                *Framework release date is required
+            </span>
         </div>
         <div class="mb-3">
             <div class="form-check">
@@ -19,6 +46,13 @@
                 <label class="form-check-label" for="checkRemember">Remember me</label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button [disabled]="frForm.invalid" type="submit" class="btn btn-primary" id="submit-button">Submit</button>
     </form>
+</div>
+
+<div *ngIf="frForm.valid">
+    <p><strong>Name:</strong> {{ this.frForm.value.name }}</p>
+    <p><strong>Version:</strong> {{ this.frForm.value.version }}</p>
+    <p><strong>Release Date:</strong> {{ this.frForm.value.releaseDate }}</p>
+    
 </div>
