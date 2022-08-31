@@ -12,6 +12,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditFrameworkComponent } from './components/edit-framework/edit-framework.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListComponent } from './components/list/list.component';
+import { AddComponent } from './components/add/add.component';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     EditFrameworkComponent,
     ReactiveFormComponent,
     NavbarComponent,
+    ListComponent,
+    AddComponent,
+    EditComponent,
 
   ],
   imports: [

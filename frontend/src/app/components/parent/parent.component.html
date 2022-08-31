@@ -1,24 +1,26 @@
 
-<app-navbar></app-navbar>
 
 
-<app-add-framework *ngIf="!isEdit"
+
+<app-add-framework *ngIf="isAdd"
  (onAddFramework)="addFramework($event)"
 ></app-add-framework>
 
 <app-edit-framework *ngIf="isEdit"
   [framework] = "currentEditableFr"
   (onEditFramework)="editFramework($event)"
-   
 ></app-edit-framework>
 
 
-<app-framework-item
-   *ngFor="let framework of frameworks"
-    [framework]="framework"
-    (click) = "editBtnClicked(framework)"
-    (onDeleteFramework)="deleteFramework($event)"
-   
->
-</app-framework-item>
+<div *ngIf="isList">
+  <app-framework-item 
+      *ngFor="let framework of frameworks"
+      [framework]="framework"
+      (click) = "editBtnClicked(framework)"
+      (onDeleteFramework)="deleteFramework($event)"
+    >
+  </app-framework-item>
+</div>
+
+<router-outlet></router-outlet>
 

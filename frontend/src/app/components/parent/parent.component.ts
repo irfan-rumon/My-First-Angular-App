@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { Framework } from 'src/app/framework';
 
@@ -9,7 +9,10 @@ import { Framework } from 'src/app/framework';
 })
 export class ParentComponent implements OnInit {
   frameworks : Framework[];
-  isEdit: boolean = false;
+  @Input() isEdit: boolean = false;
+  @Input() isHome:boolean = false;
+  @Input() isList: boolean = false;
+  @Input() isAdd: boolean = false;
   currentEditableFr: Framework;
 
   constructor(private api: ApiService) { }
