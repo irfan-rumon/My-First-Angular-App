@@ -11,6 +11,7 @@ import { FrameworkItemComponent } from './components/framework-item/framework-it
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EditFrameworkComponent } from './components/edit-framework/edit-framework.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     FrameworkItemComponent,
     EditFrameworkComponent,
     ReactiveFormComponent,
+    NavbarComponent,
 
   ],
   imports: [
