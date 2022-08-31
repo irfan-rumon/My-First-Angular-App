@@ -2,8 +2,23 @@
   "frameworks": [
     {
       "id": "1",
-      "name": "React",
-      "version": "v3.4"
+      "name": "rj",
+      "version": "v3.2"
+    },
+    {
+      "id": "2",
+      "name": "Ng",
+      "version": "v5.9"
+    },
+    {
+      "id": "7",
+      "name": "peg",
+      "version": "v5.9.2"
+    },
+    {
+      "id": "99",
+      "name": "ghj",
+      "version": "vbn"
     }
   ]
 }

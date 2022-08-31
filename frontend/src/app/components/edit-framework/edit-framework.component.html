@@ -1,15 +1,9 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+
+
+<form class="edit-form" (ngSubmit)="onSubmit()">
  
-    <div class="form-control">
-      <label for="id">ID</label>
-      <input
-        type="text"
-        name="id"
-        [(ngModel)]="id"
-        id="id"
-        placeholder="ID:"
-      />
-    </div>
+   <h1>Edit this particular Framework:</h1>
+    
       <div class="form-control">
         <label for="name">Name:</label>
         <input
@@ -18,6 +12,7 @@
           [(ngModel)]="name"
           id="name"
           placeholder="Name:"
+          value=" {{ framework.name }}"
         />
       </div>
       <div class="form-control">
@@ -28,6 +23,7 @@
           [(ngModel)]="version"
           id="version"
           placeholder="Version"
+          value="{{ framework.version }}"
         />
       </div>
   

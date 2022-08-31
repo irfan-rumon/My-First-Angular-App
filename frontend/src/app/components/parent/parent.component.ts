@@ -10,6 +10,7 @@ import { Framework } from 'src/app/framework';
 export class ParentComponent implements OnInit {
   frameworks : Framework[];
   isEdit: boolean = false;
+  currentEditableFr: Framework;
 
   constructor(private api: ApiService) { }
 
@@ -25,6 +26,13 @@ export class ParentComponent implements OnInit {
     this.api.addFramework(framework).subscribe((framework) => this.frameworks.push(framework));
   }
 
+  editBtnClicked(framework: Framework){
+    console.log(framework);
+    this.isEdit = true;
+    this.currentEditableFr = framework;
+    
+  }
+
   deleteFramework(framework: Framework) {
     this.api
       .deleteFramework(framework)
@@ -34,9 +42,12 @@ export class ParentComponent implements OnInit {
   }
 
   editFramework(framework: Framework) {
+    console.log("edite entered------>!!");
     this.api.editFramework(framework).subscribe(
-      
+      (res) => console.log(res)
     );
+    this.isEdit = false;
+    console.log(this.frameworks);
   }
 
 }
