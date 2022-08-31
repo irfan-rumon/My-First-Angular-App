@@ -2,23 +2,8 @@
   "frameworks": [
     {
       "id": "1",
-      "name": "rj",
-      "version": "v3.2"
-    },
-    {
-      "id": "2",
-      "name": "Ng",
-      "version": "v5.9"
-    },
-    {
-      "id": "7",
-      "name": "peg",
-      "version": "v5.9.2"
-    },
-    {
-      "id": "99",
-      "name": "ghj",
-      "version": "vbn"
+      "name": "Angular",
+      "version": "v8.9"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { Framework } from 'src/app/framework';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-parent',
@@ -15,7 +16,7 @@ export class ParentComponent implements OnInit {
   @Input() isAdd: boolean = false;
   currentEditableFr: Framework;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.api.getFrameworks().subscribe((frameworks) => (this.frameworks = frameworks));
@@ -27,11 +28,15 @@ export class ParentComponent implements OnInit {
   addFramework(framework: Framework) {
     console.log('entered!!');
     this.api.addFramework(framework).subscribe((framework) => this.frameworks.push(framework));
+    this.router.navigate(['/list']);
   }
 
   editBtnClicked(framework: Framework){
     console.log(framework);
     this.isEdit = true;
+    this.isAdd = false;
+    this.isHome = false;
+    this.isList = false;
     this.currentEditableFr = framework;
     
   }
@@ -42,6 +47,9 @@ export class ParentComponent implements OnInit {
       .subscribe(
         () => (this.frameworks = this.frameworks.filter((t) => t.id !== framework.id))
       );
+      this.isEdit = false; this.isList=true; this.isAdd=false; this.isHome=false;
+      this.router.navigate(['/list']);
+    
   }
 
   editFramework(framework: Framework) {
@@ -51,6 +59,7 @@ export class ParentComponent implements OnInit {
     );
     this.isEdit = false;
     console.log(this.frameworks);
+    this.router.navigate(['/list']);
   }
 
 }

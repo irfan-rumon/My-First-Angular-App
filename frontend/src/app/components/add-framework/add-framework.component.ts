@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter }  from '@angular/core';
 import { Framework } from 'src/app/framework';
 
+
 @Component({
   selector: 'app-add-framework',
   templateUrl: './add-framework.component.html',
@@ -34,9 +35,7 @@ export class AddFrameworkComponent implements OnInit {
     };
 
     this.onAddFramework.emit(newFramework);
-    this.id = 0;
-    this.name = '';
-    this.version = '';
+   
   }
 
 }

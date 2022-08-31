@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListComponent } from './components/list/list.component';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { EditComponent } from './components/edit/edit.component';
     ListComponent,
     AddComponent,
     EditComponent,
+    HomeComponent,
 
   ],
   imports: [
